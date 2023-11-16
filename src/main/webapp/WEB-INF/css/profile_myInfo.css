@@ -1,0 +1,195 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30%;
+	flex-wrap: wrap;
+}
+
+.card-container {
+	display: flex;
+	position: relative;
+	width: 400px;
+	height: 200px;
+	align-items: center;
+	padding-top:;
+	margin-top: 20px;
+	border-radius: 30px;
+	box-shadow: 1px 5px 10px 10px rgba(0, 0, 0, 0.05);
+	overflow: hidden;
+	flex-direction: column;
+}
+
+.image-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 160px;
+	width: 160px;
+	background: #fff;
+	border-radius: 50%;
+}
+
+.image-box img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.3);
+	object-fit: cover;
+}
+/* User Infomation */
+.user-info .name {
+	display: flex;
+	justify-content: center;
+}
+
+.user-info .email {
+	display: flex;
+	justify-content: center;
+	font-size: 13px;
+	color: #ee2482;
+}
+/* Animated circles */
+.circle-1 {
+	position: absolute;
+	left: -20px;
+	top: 35%;
+	height: 50px;
+	width: 50px;
+	border: 2px dashed #c975fb;
+	border-radius: 50%;
+	animation: circle-1 5s ease-in-out infinite;
+}
+
+.circle-2 {
+	position: absolute;
+	right: -20px;
+	bottom: 100px;
+	height: 100px;
+	width: 100px;
+	border: 2px dashed #c975fb;
+	border-radius: 50%;
+	animation: circle-2 15s ease-in-out infinite;
+}
+/* Circle-1 animation */
+@
+keyframes circle-1 { 50%{
+	left: -20px;
+	top: 40%;
+}}
+/* Circle-1 animation */
+@
+keyframes circle-2 {from { transform:rotate(0deg);
+}}
+to {
+	transform: rotate(360deg);
+}
+
+.mypage {
+	text-align: center; /* 입력 필드를 가로 중앙으로 정렬 */
+	margin: 10px 0; /* 비밀번호 입력창과 로그인 버튼 거리 간격*/
+	height: 1000px;
+}
+
+.mypage table {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: left;
+	margin-top: 50px;
+	margin-left: 300px;
+}
+
+.mypage label {
+	display: block;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.mypage input[type="text"]:not(#phone) {
+	width: 150px; /* 입력 창 너비 조정 */
+	padding: 5px;
+	margin: 0 auto; /* 입력 필드를 수평 중앙으로 정렬 */
+	font-size: 15px;
+}
+
+#phone {
+	width: 110px; /* 입력 창 너비 조정 */
+	padding: 5px;
+	margin: 0 auto; /* 입력 필드를 수평 중앙으로 정렬 */
+	font-size: 15px;
+}
+
+.mypage input[type="date"] {
+	width: 150px; /* 입력 창 너비 조정 */
+	padding: 5px;
+}
+
+.mypage input[type="password"] {
+	width: 150px; /* 입력 창 너비 조정 */
+	padding: 5px;
+	margin: 0 auto; /* 입력 필드를 수평 중앙으로 정렬 */
+	font-size: 15px;
+}
+
+.modify-btn {
+	background-color: #FFA101;
+	color: #FFF;
+	width: 150px;
+	height: 50px;
+	padding: 5px;
+	border: none;
+	cursor: pointer;
+	margin-top: 50px;
+	font-size: 18px;
+}
+.modify-btn:hover {
+	color: #f5f01b;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.modify-btn::after {
+  content: attr(title);
+  display: block;
+  font-weight: bold;
+  height: 0px;
+  visibility: hidden;
+}
+
+.image-box-input {
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	margin: 0 auto;
+	border: solid 2px;
+	display: inline-block;
+	vertical-align: top;
+	background-color: #F8F8F8;
+	border-radius: 50%; /* 원 모양으로 만들기 */
+}
+
+.image-box-input img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.3);
+	object-fit: cover;
+}
+
+.mypage input[type="file"] {
+	padding-left: 10px;
+	width: 78px; /* 입력 창 너비 조정 */
+}
+
+.mypage_tb td {
+	padding-left: 50px;
+	padding-bottom: 20px;
+	vertical-align: top;
+}
+
+.mypage_tb th {
+	padding-bottom: 20px;
+	vertical-align: top;
+}

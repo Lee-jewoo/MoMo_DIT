@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+input {
+	font-size: 25px;
+}
+
+textarea {
+	font-size: 15px;
+}
+
+.post-image {
+	text-align: center;
+	/* 이미지를 중앙에 배치 */
+	margin-top: 40px;
+	/* 상단 여백 추가 */
+}
+
+.post-details {
+	padding: 20px;
+	text-align: center;
+	/* 모든 내용을 중앙에 배치 */
+}
+
+.post-details h2 {
+	margin: 20px 0;
+}
+
+.momo_title {
+	font-size: 40px;
+	text-align: center;
+	margin-top: 50px;
+}
+
+table {
+	width: 60%; /* 테이블 전체 너비 설정 */
+	font-size: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	border-collapse: separate;
+	border-spacing: 0 20px;
+	margin-top: 40px; /* 행 사이의 간격 설정 */
+}
+
+td {
+	padding: 10px; /* 셀 내부 여백 설정 */
+	box-sizing: border-box;
+}
+
+/* 768px 이상의 화면에서 테이블 셀의 너비를 조정 */
+@media screen and (min-width: 768px) {
+	td {
+		width: 50%; /* 셀의 너비를 50%로 설정 */
+	}
+}
+
+.momo_detail {
+	text-align: center;
+	font-size: 30px;
+}
+
+.host-section {
+	margin: 50px auto;
+	width: 60%;
+	background-color: #F2F2F2;
+	display: flex;
+	/* Flexbox를 사용하여 내부 아이템을 가로로 배치 */
+	align-items: center;
+	/* 아이템을 수직 중앙에 배치 */
+	/* 호스트 이미지와 호스트 정보 사이의 간격 */
+	justify-content: center;
+	border: 2px solid #02108b;
+}
+
+.host-image {
+	display: flex;
+	justify-content: center;
+}
+
+.host-image img {
+	border-radius: 50%;
+	/* 원형으로 이미지 표시 */
+	width: 60px;
+	/* 이미지의 너비 지정 (원하는 크기로 조정 가능) */
+	height: 60px;
+	/* 이미지의 높이 지정 (원하는 크기로 조정 가능) */
+	margin-right: 0;
+}
+
+.host-info {
+	display: flex;
+	flex-direction: column;
+	/* 정보를 세로로 배치 */
+}
+
+.momo_detail {
+	margin-top: 30px;
+	/* 상세 내용과 info-section 사이의 간격 */
+}
+
+.host-section img {
+	margin-right: 20px;
+	/* 우측 여백 추가 */
+}
+
+.text-input {
+	margin-top: 50px;
+	display: flex;
+	margin: 30px auto;
+	width: 80%;
+	/* 폭을 80%로 확장 */
+	height: 400px;
+	/* 텍스트 입력 영역 높이 설정 */
+	border: 2px solid black;
+	/* 경계선 스타일 설정 */
+	padding: 10px;
+	/* 패딩 추가 */
+	box-sizing: border-box;
+	/* 패딩이 너비와 높이에 포함되도록 설정 */
+	resize: none;
+	/* 사용자가 크기를 조절하지 못하게 함 */
+}
+
+.application-button {
+	background-color: #FFA101;
+	/* 배경색 설정 */
+	border: none;
+	/* 경계선 제거 */
+	color: white;
+	/* 텍스트 색상 설정 */
+	padding: 20px 40px;
+	/* 패딩 설정 */
+	text-align: center;
+	/* 텍스트 중앙 정렬 */
+	text-decoration: none;
+	/* 텍스트 장식 제거 */
+	display: inline-block;
+	/* 인라인 블록으로 표시 */
+	font-size: 16px;
+	/* 폰트 크기 설정 */
+	margin: 4px 2px;
+	/* 마진 설정 */
+	cursor: pointer;
+	/* 마우스 커서를 포인터로 설정 */
+	border-radius: 4px;
+	/* 모서리 둥글게 설정 */
+	margin: 50px 0;
+}
+
+._title {
+	font-size: 40px;
+	text-align: center;
+	margin-top: 50px;
+}

@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+.select {
+	margin-top: 100px;
+	text-align: center;
+	font-size: 35px;
+}
+
+.select img {
+	margin-bottom: 50px;
+	text-align: center;
+	object-fit: cover;
+	width: 500px;
+	height: 300px;
+}
+
+.select hr {
+	background-color: #FFA101;
+}
+
+.select a {
+	color: gray;
+}
+
+.info {
+	position: absolute;
+	left: 25%;
+	right: 25%;
+	font-size: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.info p {
+	font-size: 35px;
+}
+
+.info td {
+	height: 60px;
+	vertical-align: top;
+	margin-bottom: 20px;
+}
+
+.button {
+	text-align: center;
+}
+
+input[type="button"] {
+	width: 120px;
+	color: #ffffff;
+	font-size: 20px;
+	background-color: #FFA101;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}

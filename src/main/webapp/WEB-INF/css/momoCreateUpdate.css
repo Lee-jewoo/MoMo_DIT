@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+.momoCreateUpdate {
+	width: 100%;
+	margin-top: 100px;
+	text-align: center;
+}
+
+li p {
+	width: 200px;
+}
+
+input[type="text"] {
+	width: 500px;
+	height: 48px;
+	box-sizing: border-box;
+	background-color: #F8F8F8;
+	border: solid 1px;
+}
+input[type="number"] {
+	width: 500px;
+	height: 48px;
+	box-sizing: border-box;
+	background-color: #F8F8F8;
+	border: solid 1px;
+}
+
+textarea {
+	width: 500px;
+	height: 500px;
+	box-sizing: border-box;
+	border: solid 2px;
+	background-color: #F8F8F8;
+	display: inline-block;
+	vertical-align: top;
+	border: solid 1px;
+}
+
+input[type="submit"] {
+	width: 150px;
+	color: #fff;
+	font-size: 20px;
+	background-color: #FFA101;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border: none;
+}
+
+input[type="file"] {
+	width: 80px;
+	color: #fff;
+	font-size: 15px;
+	background-color: #FAE6B1;
+	margin-left: -213px;
+}
+
+input[type="date"] {
+	width: 498px;
+	height: 48px;
+	background-color: #F8F8F8;
+	border: solid 1px;
+}
+
+select {
+	width: 13%;
+	height: 30px;
+	text-align: center;
+	background-color: #F8F8F8;
+}
+
+.image-box {
+	width: 500px;
+	height: 300px;
+	overflow: hidden;
+	margin: 0 auto;
+	display: inline-block;
+	vertical-align: top;
+	background-color: #FAE6B1;
+}
+
+.image-box img {
+	width: 500px;
+	height: 300px;
+	object-fit: contain;
+}

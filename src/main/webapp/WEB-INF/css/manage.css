@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+.menu {
+	width: 5000px;
+	height: 50px;
+	text-align: center;
+	max-width: 100%;
+	background-position: center;
+	background-size: cover;
+	background-color: #FAE6B1;
+	color: #FAE6B1;
+	position: absolute;
+	z-index: 1;
+}
+
+.logo {
+	font-size: 30px;
+	padding-left: 40px;
+}
+
+#managetitle {
+	margin-top: 50px;
+	text-align: center;
+	font-size: 40px;
+}
+
+.management p {
+	text-align: center;
+	font-size: 35px;
+}
+
+.management table {
+	width: 40%;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 30px;
+}
+
+.manage_table {
+	height: 800px;
+	overflow: scroll;
+}
+
+tr {
+	background-color: #FFA101;
+}
+
+
+#momoName_td {
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	width: 400px;
+	height: 60px;
+}
+
+input[type="button"] {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	width: 100px;
+	color: #6C6C6C;
+	font-size: 20px;
+	background-color: #FFF29E;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.management a {
+	text-decoration-line:none;
+	color:black;
+}

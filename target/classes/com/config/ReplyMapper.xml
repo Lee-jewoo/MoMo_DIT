@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ReplyMapper">
+
+	<!-- 댓글 추가 -->
+	<insert id="addReply" parameterType="com.dto.ReplyDTO">
+		INSERT INTO reply (reply_id, momo_id, nickname, replyContent, replyDate,
+		fixDate)
+		VALUES (reply_id_seq.NEXTVAL, #{momo_id}, #{nickname}, #{replyContent}, TO_DATE(#{replyDate} ,'YYYY-MM-DD HH24:MI'),
+		TO_DATE(#{fixDate} ,'YYYY-MM-DD HH24:MI'))
+	</insert>
+
+	<!-- 모든 댓글 조회 -->
+	<select id="selectAllReplies" resultType="com.dto.ReplyDTO">
+		SELECT * FROM reply
+	</select>
+
+	<!-- 댓글 ID로 조회 -->
+	<select id="selectReplyById" resultType="com.dto.ReplyDTO">
+		SELECT * FROM reply
+		WHERE reply_id=#{reply_id}
+	</select>
+	
+		<!-- 댓글 nickname 으로 조회 -->
+	<select id="selectReplyByNickname" resultType="com.dto.ReplyDTO">
+		SELECT * FROM reply
+		WHERE nickname=#{nickname}
+	</select>
+
+	<!-- 댓글 수정 -->
+	<update id="updateReply" parameterType="com.dto.ReplyDTO">
+		UPDATE reply
+		SET
+		replyContent=#{replyContent},
+		fixDate=sysdate
+		WHERE reply_id=#{reply_id}
+	</update>
+
+	<!-- 댓글 삭제 -->
+	<delete id="deleteReplyById">
+		DELETE FROM reply WHERE reply_id=#{id}
+	</delete>
+
+	<select id="Detail_Member" parameterType="String"
+		resultType="MemberDTO">
+		select *
+		from member
+		where nickname=#{nickname}
+	</select>
+
+
+</mapper>

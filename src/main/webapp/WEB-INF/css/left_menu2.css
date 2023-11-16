@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.left_menu {
+	list-style-type: none;
+	position: sticky;
+	padding: 60px;
+	margin: 0px;
+	width: 200px;
+	height: 100vh;
+	overflow: auto;
+	font-size: 30px;
+	font-weight: bold;
+	top: 20%;
+	z-index: 2;
+}
+
+.left_menu a:link {
+  color : #FFA101;
+}
+
+.left_menu a:visited  {
+  color : #FFA101;
+}
+
+.left_menu li {
+	margin-bottom: 20px;
+}

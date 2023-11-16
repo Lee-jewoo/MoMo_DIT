@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="GuestMapper">
+
+	<select id="detail_Guest" parameterType="int" resultType="GuestDTO">
+		select *
+		from guest
+		where momo_id=#{momo_id}
+	</select>
+	
+	<select id="find_Guest" parameterType="int" resultType="GuestDTO">
+		select *
+		from guest
+		where guest_id=#{guest_id}
+	</select>
+
+	<delete id="delete_Guest" parameterType="int">
+		delete from guest
+		where guest_id=#{guest_id}
+	</delete>
+	
+	<insert id="add_Guest" parameterType="Map">
+		insert into guest(guest_id, nickname,momo_id)
+		values (guest_id_seq.nextval, #{nickname}, #{momo_id})
+	</insert>
+	
+	<!-- 사용자 닉네임으로 참여한 목록 조회 -->
+	<select id="guestList" parameterType="string" resultType="GuestDTO">
+		select *
+		from guest
+		where nickname=#{nickname}
+	</select>
+
+</mapper>

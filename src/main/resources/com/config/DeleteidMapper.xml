@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="DeleteidMapper">
+
+	<insert id="Add_deleteid" parameterType="HashMap">
+		insert into deleteid(nickname,email)
+		values (#{nickname},#{email})
+	</insert>
+	
+	<select id="Deleteid_list" parameterType="String"  resultType="String">
+		select nickname
+		from deleteid
+		where nickname=#{nickname}
+	</select>
+	
+	<select id="Deleteid_list_byEmail" parameterType="String"  resultType="String">
+		select email
+		from deleteid
+		where email=#{email}
+	</select>
+
+</mapper>
+
+
+

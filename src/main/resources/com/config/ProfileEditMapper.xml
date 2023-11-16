@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ProfileEditMapper">
+	<!-- 회원정보 조회 -->
+    <select id="getMemberInfoByNickname" parameterType="string" resultType="MemberDTO">
+        SELECT nickname, email, passwd, memberIntro, profile_img
+        FROM member
+        WHERE nickname = #{nickname}
+    </select>
+	
+	<!-- 회원정보 수정 -->
+	<update id="changeProfile" parameterType="MemberDTO" >
+		UPDATE MEMBER
+		set
+		nickname=#{nickname}, email=#{email}, passwd=#{passwd},  
+		memberIntro=#{memberIntro}, profile_img=#{profile_img}
+		where nickname=#{nickname}
+	</update>
+</mapper>

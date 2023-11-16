@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="LocationMapper">
+
+	<select id="detail_Location" parameterType="int" resultType="LocationDTO">
+		select *
+		from Location
+		where loc_num=#{loc_num}
+	</select>
+	
+	<select id="locList" resultType="LocationDTO">
+		select *
+		from location
+		order by loc_level asc, loc_num asc
+	</select>
+	
+	<select id="locList2" resultType="LocationDTO" parameterType="int">
+		select *
+		from location
+		where par_loc_num = #{loc_num1}
+		order by loc_num asc
+	</select>
+
+</mapper>
+
+
+

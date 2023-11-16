@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.momoCancelApplicant {
+	margin-top: 50px;
+	text-align: center;
+}
+
+.image-box {
+	width: 500px;
+	height: 300px;
+	overflow: hidden;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	display: inline-block;
+	vertical-align: top;
+	background-color: #FAE6B1;
+}
+
+.image-box img {
+	width: 500px;
+	height: 300px;
+	object-fit: contain;
+}
+
+input {
+	width: 500px;
+	height: 48px;
+	box-sizing: border-box;
+	background-color: #F8F8F8;
+}
+
+input[type="submit"] {
+	width: 150px;
+	color: #fff;
+	font-size: 20px;
+	background-color: #FFA101;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}

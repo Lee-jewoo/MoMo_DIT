@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+.select {
+	margin-top: 100px;
+	text-align: center;
+	font-size: 35px;
+}
+
+.select img {
+	margin-bottom: 50px;
+	text-align: center;
+	object-fit: cover;
+	width: 500px;
+	height: 300px;
+}
+
+.select hr {
+	background-color: #FFA101;
+}
+
+.select a {
+	color: gray;
+}
+
+.manage {
+	margin-top: 50px;
+	text-align: center;
+}
+
+.manage p {
+	font-size: 30px;
+}
+
+.manage table {
+	margin-left: auto;
+	margin-right: auto;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	text-align: left;
+}
+
+.manage img {
+	width: 90px;
+	height: 90px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.join {
+	width: 100%;
+	height: 230px;
+	overflow: auto;
+}
+
+.guest {
+	width: 100%;
+	height: 300px;
+	overflow: auto;
+}
+
+.guest table {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.cancel {
+	width: 100%;
+	height: 300px;
+	overflow: auto;
+}
+
+.cancel table {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#bgcolor {
+	background-color: #FFA101;
+}
+
+#bgcolor2 {
+	background-color: #FFA101;
+	padding: 15px;
+	table-layout: fixed;
+}
+
+td input[type="button"] {
+	width: 60px;
+	color: #6C6C6C;
+	font-size: 20px;
+	background-color: #ffdb58;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+td {
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: -5px;
+	padding-bottom: -5px;
+}
+
+.td_nickname {
+	font-weight: bold;
+	width: 100px;
+	background-color: #ffdb58;
+	border-radius: 15px;
+	text-align: center;
+}
+
+.td_gender {
+	font-weight: bold;
+	width: 100px;
+	color: #ffdb58;
+	text-align: center;
+}

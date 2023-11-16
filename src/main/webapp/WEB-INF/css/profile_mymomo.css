@@ -1,0 +1,161 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30%;
+	flex-wrap: wrap;
+}
+
+.card-container {
+	display: flex;
+	position: relative;
+	width: 400px;
+	height: 200px;
+	align-items: center;
+	padding-top:;
+	margin-top: 20px;
+	border-radius: 30px;
+	box-shadow: 1px 5px 10px 10px rgba(0, 0, 0, 0.05);
+	overflow: hidden;
+	flex-direction: column;
+}
+
+.image-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 160px;
+	width: 160px;
+	background: #fff;
+	border-radius: 50%;
+}
+
+.image-box img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.3);
+	object-fit: cover;
+}
+/* User Infomation */
+.user-info .name {
+	display: flex;
+	justify-content: center;
+}
+
+.user-info .email {
+	display: flex;
+	justify-content: center;
+	font-size: 13px;
+	color: #ee2482;
+}
+/* Animated circles */
+.circle-1 {
+	position: absolute;
+	left: -20px;
+	top: 35%;
+	height: 50px;
+	width: 50px;
+	border: 2px dashed #c975fb;
+	border-radius: 50%;
+	animation: circle-1 5s ease-in-out infinite;
+}
+
+.circle-2 {
+	position: absolute;
+	right: -20px;
+	bottom: 100px;
+	height: 100px;
+	width: 100px;
+	border: 2px dashed #c975fb;
+	border-radius: 50%;
+	animation: circle-2 15s ease-in-out infinite;
+}
+/* Circle-1 animation */
+@
+keyframes circle-1 { 50%{
+	left: -20px;
+	top: 40%;
+}
+
+}
+/* Circle-1 animation */
+@
+keyframes circle-2 {from { transform:rotate(0deg);
+	
+}
+}
+to {
+	transform: rotate(360deg);
+}
+
+h2 {
+	margin-top: 50px;
+}
+
+.list {
+	height: 1000px;
+	margin-top: 100px;
+	margin-bottom: 200px;
+	margin-left: 15%;
+	text-align: center;
+	font-size: 15px;
+}
+
+.interest {
+	position: relative;
+	width: 80%;
+	height: 40%;
+	overflow: auto;
+}
+
+.applicant {
+	position: relative;
+	width: 80%;
+	height: 40%;
+	overflow: auto;
+}
+
+.join {
+	position: relative;
+	width: 80%;
+	height: 40%;
+	overflow: auto;
+}
+
+.interest table,.applicant table, .join table {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+	font-size: 15pt;
+}
+
+.interest_list th, .interest_list td, .applicant_list th, .applicant_list td, .join_list th, .join_list td {
+	padding: 5px;
+}
+
+.interest_list td, .applicant_list td:not(.cancel_button), .join_list td:not(.cancel_button) {
+	background-color: #FFA101;
+	border-radius: 40px 40px;
+}
+
+td input[type="button"] {
+	width: 80px;
+	color: #6C6C6C;
+	font-size: 13px;
+	background-color: #ffdb58;
+	text-align: center;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+a {
+	color:black;
+}

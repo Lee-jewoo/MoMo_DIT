@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MemberMapper">
+
+	<select id="detail_Member" parameterType="String"
+		resultType="MemberDTO">
+		select *
+		from member
+		where nickname=#{nickname}
+	</select>
+
+	<select id="nicknameByLogin" parameterType="hashmap"
+		resultType="MemberDTO">
+		select *
+		from member
+		where email=#{email} and
+		passwd=#{passwd}
+	</select>
+
+	<select id="authenticateUser" resultType="int"
+		parameterType="java.util.Map">
+		SELECT COUNT(*) FROM MEMBER
+		WHERE EMAIL = #{email} AND PASSWD = #{passwd}
+	</select>
+
+	<select id="findEmail" resultType="MemberDTO"
+		parameterType="String">
+		SELECT *
+		FROM MEMBER
+		WHERE EMAIL = #{email}
+	</select>
+	
+	<insert id="saveUser" parameterType="MemberDTO">
+        INSERT INTO MEMBER (email, passwd, nickname, gender, memberIntro, profile_img)
+        VALUES (#{email}, #{passwd}, #{nickname}, #{gender}, #{memberIntro}, #{profile_img})
+    </insert>
+
+	<update id="changePassword" parameterType="Map">
+		update member
+		set passwd=${passwd}
+		where email=#{email}
+	</update>
+	
+	<delete id="delete_Member" parameterType="String">
+		delete from member
+		where nickname=#{nickname}
+	</delete>
+</mapper>

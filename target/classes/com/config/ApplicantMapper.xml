@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ApplicantMapper">
+
+	<select id="selectApplicantById" parameterType="int"
+		resultType="ApplicantDTO">
+		select *
+		from applicant
+		where applicant_id=#{applicant_id}
+	</select>
+
+	<delete id="deleteApplicantById" parameterType="int">
+		delete from
+		applicant
+		where applicant_id=#{applicant_id}
+	</delete>
+
+	<select id="selectApplicantByNickname" parameterType="string"
+		resultType="com.dto.ApplicantDTO">
+		select *
+		from applicant
+		where nickname = #{nickname}
+	</select>
+
+	<select id="selectApplicantByMomo_id" parameterType="int"
+		resultType="ApplicantDTO">
+		select *
+		from applicant
+		where momo_id=#{momo_id}
+	</select>
+
+	<select id="checkIfUserIsHost" parameterType="Map"
+		resultType="int">
+		select count(*)
+		from mainboard
+		where momo_id=#{momo_id} and
+		nickname=#{nickname}
+	</select>
+
+	<insert id="momoApplicant" parameterType="ApplicantDTO">
+		insert into applicant
+		(applicant_id, momo_id, nickname, reason1, reason2)
+		values
+		(applicant_id_seq.nextval, #{momo_id}, #{nickname}, #{reason1},
+		#{reason2})
+	</insert>
+
+	<select id="selectApplicantByMomoIdAndNickname"
+		parameterType="Map" resultType="com.dto.ApplicantDTO">
+		select *
+		from applicant
+		where momo_id =
+		#{momo_id} and nickname = #{nickname}
+	</select>
+
+	<!-- 호스트 카운트 확인 -->
+	<select id="selectHostCount" parameterType="map" resultType="java.lang.Integer">
+		SELECT COUNT(*) 
+		FROM mainboard WHERE momo_id = #{momo_id} AND 
+		nickname = #{nickname}
+	</select>
+
+	<!-- 게스트 카운트 확인 -->
+	<select id="selectGuestCount" parameterType="map" resultType="java.lang.Integer">
+		SELECT COUNT(*) 
+		FROM guest WHERE momo_id = #{momo_id} AND 
+		nickname = #{nickname}
+	</select>
+	
+	<!-- 신청자 카운트 확인 -->
+	<select id="selectApplicantCount" parameterType="map" resultType="java.lang.Integer">
+		SELECT COUNT(*) 
+		FROM applicant WHERE momo_id = #{momo_id} AND 
+		nickname = #{nickname}
+	</select>
+	
+</mapper>
